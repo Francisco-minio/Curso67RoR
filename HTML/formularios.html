@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <div>
+        <!--formularios-->
+        <!--action =  ruta hacia donde enviamos la información  -->
+        <!--method : forma de pasar los parametros (GET,POST)-->
+        <form action="/" method="POST">
+            <label for="">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <br>
+            <label for="">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+            <br>
+            <br>
+            <label for="">Edad:</label>
+            <input type="text" id="edad" name="edad">
+            <br>
+            <br>
+            <label for="">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <br>
+            <label for="">Password</label>
+            <input type="password" id="pass" name="pass">
+            <br>
+            <br>
+            <label for="fecha1">Fecha 1</label>
+            <input type="date" name="fecha1" id="fecha1">
+            <br>
+            <br>
+            <label for="fecha2">Fecha 2 con datetime-local</label>
+            <input type="datetime-local" name="fecha2" id="fecha2">
+            <br>
+            <br>
+            <label for="fecha3">Fecha 3 con datetime:</label>
+            <input type="datetime" name="fecha3" id="fecha3">
+
+            <br>
+            <hr>
+            <!-- el name debe ser igual en todas las opciones-->
+            <!--el value es el valor que va a capturar   en el backend-->
+            <label for="m">Masculino</label>
+            <input type="radio" name="genero" id="m" value="m">
+            <label for="f">Femenino</label>
+            <input type="radio" name="genero" id="f" value="f">
+            <label for="o">Otro</label>
+            <input type="radio" name="genero" id="o" value="o">
+
+            <!--checkbox-->
+
+            <br>
+            <br>
+            <label for="v">Verano</label>
+            <input type="checkbox" name="verano" id="verano" value="verano">
+            <br>
+            <br>
+            <label for="i">Invierno</label>
+            <input type="checkbox" name="invierno" id="invierno" value="invierno">
+            <br>
+            <br>
+            <label for="o">Otoños</label>
+            <input type="checkbox" name="otoño" id="otoño" value="otoño">
+            <br><br>
+            <select name="lenguajes" id="lenguajes">
+                <option value="0">Seleccionar Lenguaje</option>
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JavaScript</option>
+            </select>
+            <br><br>
+            <label for="detalle">Ingrese información detallada:</label>
+            <textarea name="detalle" id="detalle" cols="30" rows="5"></textarea>
+            <br><br>
+            <!--el type = button no sirve por si solo para enviar información-->
+
+            <input type="button" value="ENVIAR">
+
+            <br><br>
+            <input type="submit" value="ENVIAR ">
+
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>
