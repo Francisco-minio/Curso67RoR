@@ -1,44 +1,57 @@
 /*CSS reset settings here*/
 
-body {
-    margin: 5px;
+* {
+    margin: 0px;
     padding: 0px;
-    background-color: darkgray;
 }
 
 #wrapper {
     width: 950px;
-    background-color: aquamarine;
-    margin: 0px auto;
-    display: inline;
-    border: blue 1px;
+    background-color: darkgray;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
 }
 
 #header {
     min-height: 150px;
     background-color: green;
+    margin-bottom: 15px;
 }
 
 #navigation {
-    min-height: 300px;
+    min-height: 400px;
     width: 200px;
     background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
 }
 
 #main_content {
-    min-height: 400px;
-    width: 700px;
+    min-width: 690px;
+    height: 360px;
     background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
 }
 
 .subcontents {
-    min-height: 200px;
-    width: 210px;
+    min-height: 212px;
+    width: 212px;
     background-color: yellow;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 6px;
 }
 
 #advertisement {
-    min-height: 120px;
-    width: 660px;
+    min-height: 100px;
+    width: 675px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 6px;
     background-color: purple;
+    vertical-align: top;
 }
