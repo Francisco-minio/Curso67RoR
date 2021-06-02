@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    outline: 1px dotted red;
+}
+
+#container {
+    margin-left: 200px;
+    background-color: #245076;
+    width: 975px;
+    height: 900px;
+}
+
+#top {
+    margin-top: 5px;
+    width: 930px;
+    height: 20px;
+    display: inline-block;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+}
+
+.coloryellow {
+    color: yellow;
+}
+
+#colorP {
+    color: white;
+}
+
+.select {
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+/*Header*/
+
+#header {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 930px;
+    height: auto;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 320px;
+}
+
+.select {
+    vertical-align: top;
+    margin-left: px;
+    display: inline-block;
+}
+
+#btnsearch {
+    margin-left: 3px;
+    margin-top: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    background-color: #444444;
+    border-radius: 12px;
+    padding: 10px 30px 10px 30px;
+    box-shadow: 1px 1px 1px 2px #1d1d1d;
+}
+
+.search {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    box-shadow: inset 1px 1px whitesmoke;
+}
+
+#btn {
+    vertical-align: middle;
+    background-color: #245076;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: whitesmoke;
+    box-shadow: 1px 1px 1px 1px #1d1d1d;
+    color: white;
+}
+
+
+/*Navegación header*/
+
+#nav {
+    background-color: #467ead;
+    width: 500px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px #3b3a3a;
+}
+
+.textnav {
+    color: white;
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: cursive;
+    text-decoration: none;
+}
+
+#contenthead {
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    height: auto;
+}
+
+.content1 {
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 50px;
+    width: 600px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+
+.navizq {
+    margin-left: 105px;
+    vertical-align: top;
+    display: inline-block;
+    width: 150px;
+}
