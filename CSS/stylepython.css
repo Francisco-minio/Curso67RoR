@@ -1,139 +1,201 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-* {
-    outline: 1px dotted red;
-}
-
-#container {
-    margin-left: 200px;
-    background-color: #245076;
-    width: 975px;
-    height: 900px;
-}
-
-#top {
-    margin-top: 5px;
-    width: 930px;
-    height: 20px;
-    display: inline-block;
-    text-align: right;
-    color: white;
-    font-size: 12px;
-}
-
-.coloryellow {
-    color: yellow;
-}
-
-#colorP {
-    color: white;
-}
-
-.select {
-    vertical-align: top;
-    display: inline-block;
-}
-
-
-/*Header*/
-
-#header {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 930px;
-    height: auto;
-}
-
-.logo {
-    width: 250px;
-    height: auto;
-    padding: 20px;
-    display: inline-block;
-    margin-right: 320px;
-}
-
-.select {
-    vertical-align: top;
-    margin-left: px;
-    display: inline-block;
-}
-
-#btnsearch {
-    margin-left: 3px;
-    margin-top: 30px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    background-color: #444444;
-    border-radius: 12px;
-    padding: 10px 30px 10px 30px;
-    box-shadow: 1px 1px 1px 2px #1d1d1d;
-}
-
-.search {
-    width: 180px;
-    height: auto;
-    padding: 10px;
-    box-shadow: inset 1px 1px whitesmoke;
-}
-
-#btn {
-    vertical-align: middle;
-    background-color: #245076;
-    width: 50px;
-    height: 30px;
-    border-radius: 10px;
-    border-color: whitesmoke;
-    box-shadow: 1px 1px 1px 1px #1d1d1d;
-    color: white;
-}
-
-
-/*Navegación header*/
-
-#nav {
-    background-color: #467ead;
-    width: 500px;
-    display: inline-block;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 2px 2px 2px 2px #3b3a3a;
-}
-
-.textnav {
-    color: white;
-    font-size: 15px;
-    margin-left: 5px;
-    font-family: cursive;
-    text-decoration: none;
-}
-
-#contenthead {
-    margin-top: 10px;
-    text-align: center;
-    vertical-align: top;
-    display: inline-block;
-    height: auto;
-}
-
-.content1 {
-    margin-top: 10px;
-    vertical-align: top;
-    margin-left: 50px;
-    width: 600px;
-    padding: 10px;
-    display: inline-block;
-    font-size: 12px;
-    color: white;
-}
-
-.navizq {
-    margin-left: 105px;
-    vertical-align: top;
-    display: inline-block;
-    width: 150px;
-}
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #containergeneral {
+        width: 975px;
+        margin-left: 200px;
+    }
+    
+    #container {
+        width: 975px;
+        margin-left: 200px;
+        background-color: #245076;
+        height: 520px;
+        box-shadow: 1px 1px 1px 1px rgb(117, 115, 115);
+    }
+    
+    #top {
+        margin-top: 5px;
+        width: 930px;
+        height: 20px;
+        display: inline-block;
+        text-align: right;
+        color: white;
+        font-size: 12px;
+    }
+    
+    .coloryellow {
+        color: yellow;
+    }
+    
+    #colorP {
+        color: white;
+    }
+    
+    .select {
+        vertical-align: top;
+        display: inline-block;
+    }
+    /*Header*/
+    
+    #header {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 970px;
+        height: auto;
+    }
+    
+    .logo {
+        width: 250px;
+        height: auto;
+        padding: 20px;
+        display: inline-block;
+        margin-right: 320px;
+    }
+    
+    .select {
+        vertical-align: top;
+        margin-left: px;
+        display: inline-block;
+    }
+    
+    #btnsearch {
+        margin-left: 15px;
+        margin-top: 30px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        background-color: #444444;
+        border-radius: 12px;
+        padding: 10px 30px 10px 30px;
+        box-shadow: 1px 1px 1px 2px #1d1d1d;
+    }
+    
+    .search {
+        width: 180px;
+        height: auto;
+        padding: 10px;
+        box-shadow: inset 1px 1px whitesmoke;
+    }
+    
+    #btn {
+        vertical-align: middle;
+        background-color: #245076;
+        width: 50px;
+        height: 30px;
+        border-radius: 10px;
+        border-color: whitesmoke;
+        box-shadow: 1px 1px 1px 1px #1d1d1d;
+        color: white;
+    }
+    /*Navegación header*/
+    
+    #nav {
+        background-color: #467ead;
+        width: 850px;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px 2px #3b3a3a;
+    }
+    
+    .textnav {
+        color: white;
+        font-size: 18px;
+        margin-left: 60px;
+        font-family: cursive;
+        text-decoration: none;
+    }
+    
+    #contenthead {
+        margin-top: 10px;
+        text-align: center;
+        vertical-align: top;
+        display: inline-block;
+        height: auto;
+    }
+    
+    .navizq {
+        margin-top: 30px;
+        margin-right: 30px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 150px;
+        list-style-image: url("arrow.png");
+        color: white;
+        line-height: 1.5;
+    }
+    
+    .content1 {
+        margin-top: 10px;
+        text-align: center;
+        width: 680px;
+        display: inline-block;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .content2 {
+        margin-left: 120px;
+        text-align: center;
+        margin-top: -50px;
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 19px;
+        color: yellow;
+        font-style: italic;
+        list-style-type: none;
+    }
+    
+    .zen {
+        margin-top: 15px;
+        color: white;
+    }
+    /*FOOTER*/
+    
+    #get {
+        text-align: center;
+        margin-top: 50px;
+        width: 975px;
+        display: inline-block;
+        background-color: white;
+    }
+    
+    .get1 {
+        display: inline-block;
+        width: 300px;
+        list-style-type: square;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .get1 p span {
+        color: rgb(10, 132, 214);
+    }
+    
+    .get1 li {
+        margin-top: 5px;
+        color: rgb(10, 132, 214);
+    }
+    
+    #footer {
+        height: 120px;
+        width: 930px;
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        background: linear-gradient(to bottom, #265781, #316fa4);
+    }
+    
+    .navfooter a {
+        text-align: center;
+        color: #316fa4;
+        font-size: 18px;
+        margin-left: 60px;
+        text-decoration: none;
+    }

@@ -1,0 +1,78 @@
+                                                                                                        #container {
+                                                                                                            display: inline-block;
+                                                                                                        }
+                                                                                                        
+                                                                                                        @media only screen and (max-width: 480px) {
+                                                                                                            .sm {
+                                                                                                                min-width: 480px;
+                                                                                                                height: 100%;
+                                                                                                            }
+                                                                                                            h1 {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(138, 138, 138);
+                                                                                                            }
+                                                                                                            p {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(148, 148, 148);
+                                                                                                            }
+                                                                                                            .p4 {
+                                                                                                                background-color: rgb(255, 238, 0);
+                                                                                                                padding: 50px;
+                                                                                                            }
+                                                                                                            .p3 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                            .p2 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                        }
+                                                                                                        
+                                                                                                        @media only screen and (min-width: 481px) and (max-width:1023px) {
+                                                                                                            .med {
+                                                                                                                min-width: 481px;
+                                                                                                                height: 300px;
+                                                                                                            }
+                                                                                                            h1 {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(138, 138, 138);
+                                                                                                            }
+                                                                                                            p {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(148, 148, 148);
+                                                                                                            }
+                                                                                                            .p3 {
+                                                                                                                background-color: rgb(255, 238, 0);
+                                                                                                                padding: 50px;
+                                                                                                            }
+                                                                                                            .p4 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                            .p2 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                        }
+                                                                                                        
+                                                                                                        @media only screen and (min-width: 1024px) {
+                                                                                                            .lg {
+                                                                                                                width: 100%;
+                                                                                                                height: 300px;
+                                                                                                            }
+                                                                                                            h1 {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(138, 138, 138);
+                                                                                                            }
+                                                                                                            p {
+                                                                                                                padding: 50px;
+                                                                                                                background-color: rgb(148, 148, 148);
+                                                                                                            }
+                                                                                                            .p2 {
+                                                                                                                background-color: rgb(255, 238, 0);
+                                                                                                                padding: 50px;
+                                                                                                            }
+                                                                                                            .p3 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                            .p4 {
+                                                                                                                display: none;
+                                                                                                            }
+                                                                                                        }
