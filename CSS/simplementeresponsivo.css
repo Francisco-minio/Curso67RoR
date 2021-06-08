@@ -1,75 +1,75 @@
-                                                                                                        #container {
-                                                                                                            display: inline-block;
-                                                                                                        }
-                                                                                                        
-                                                                                                        @media only screen and (max-width: 480px) {
-                                                                                                            .sm {
-                                                                                                                display: block;
-                                                                                                            }
-                                                                                                            h1 {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(138, 138, 138);
-                                                                                                            }
-                                                                                                            p {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(148, 148, 148);
-                                                                                                            }
-                                                                                                            .p4 {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(255, 238, 0);
-                                                                                                            }
-                                                                                                            .p3 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                            .p2 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                        }
-                                                                                                        
-                                                                                                        @media only screen and (min-width: 481px) and (max-width:1023px) {
-                                                                                                            .med {
-                                                                                                                display: block;
-                                                                                                            }
-                                                                                                            h1 {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(138, 138, 138);
-                                                                                                            }
-                                                                                                            p {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(148, 148, 148);
-                                                                                                            }
-                                                                                                            .p3 {
-                                                                                                                background-color: rgb(255, 238, 0);
-                                                                                                                padding: 10%;
-                                                                                                            }
-                                                                                                            .p4 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                            .p2 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                        }
-                                                                                                        
-                                                                                                        @media only screen and (min-width: 1024px) {
-                                                                                                            .lg {
-                                                                                                                display: block;
-                                                                                                            }
-                                                                                                            h1 {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(138, 138, 138);
-                                                                                                            }
-                                                                                                            p {
-                                                                                                                padding: 10%;
-                                                                                                                background-color: rgb(148, 148, 148);
-                                                                                                            }
-                                                                                                            .p2 {
-                                                                                                                background-color: rgb(255, 238, 0);
-                                                                                                                padding: 10%;
-                                                                                                            }
-                                                                                                            .p3 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                            .p4 {
-                                                                                                                display: none;
-                                                                                                            }
-                                                                                                        }
+#container {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+    .sm {
+        display: block;
+    }
+    h1 {
+        padding: 10%;
+        background-color: rgb(138, 138, 138);
+    }
+    p {
+        padding: 10%;
+        background-color: rgb(148, 148, 148);
+    }
+    .p4 {
+        padding: 10%;
+        background-color: rgb(255, 238, 0);
+    }
+    .p3 {
+        display: none;
+    }
+    .p2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width:1023px) {
+    .med {
+        display: block;
+    }
+    h1 {
+        padding: 10%;
+        background-color: rgb(138, 138, 138);
+    }
+    p {
+        padding: 10%;
+        background-color: rgb(148, 148, 148);
+    }
+    .p3 {
+        background-color: rgb(255, 238, 0);
+        padding: 10%;
+    }
+    .p4 {
+        display: none;
+    }
+    .p2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .lg {
+        display: block;
+    }
+    h1 {
+        padding: 10%;
+        background-color: rgb(138, 138, 138);
+    }
+    p {
+        padding: 10%;
+        background-color: rgb(148, 148, 148);
+    }
+    .p2 {
+        background-color: rgb(255, 238, 0);
+        padding: 10%;
+    }
+    .p3 {
+        display: none;
+    }
+    .p4 {
+        display: none;
+    }
+}
