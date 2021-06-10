@@ -1,77 +1,57 @@
-                            /*CSS reset settings here*/
-                        
-                        * {
-                            margin: 0px;
-                            padding: 0px;
-                        }
-                        
-                        #wrapper {
-                            width: 98%;
-                            height: 100%;
-                            background-color: darkgray;
-                            margin: 5px;
-                            padding: 10px;
-                            display: inline-block;
-                        }
-                        
-                        @media only screen and (min-width: 481px) {
-                            .sm {
-                                display: block;
-                            }
-                            .header {
-                                min-width: 30%;
-                            }
-                            .navigation {
-                                display: none;
-                            }
-                        }
-                        
-                        @media only screen and (min-width: 481px) and (max-width:1023px) {
-                            .med {
-                                display: block;
-                            }
-                            .navigation {
-                                display: none;
-                            }
-                        }
-                        
-                        @media only screen and (min-width: 1024px) {
-                            .lg {
-                                display: block;
-                            }
-                            .header {
-                                min-width: 98%;
-                                min-height: 150px;
-                                background-color: green;
-                                margin-bottom: 15px;
-                            }
-                            .navigation {
-                                min-width: 20%;
-                                min-height: 400px;
-                                background-color: blue;
-                                display: inline-block;
-                                vertical-align: top;
-                                margin-right: 15px;
-                            }
-                            #main_content {
-                                min-width: 70%;
-                                background-color: red;
-                                display: inline-block;
-                                vertical-align: top;
-                                padding: 20px;
-                            }
-                            .subcontents {
-                                width: 20%;
-                                height: 180px;
-                                background-color: yellow;
-                                display: inline-block;
-                                padding: 2%;
-                            }
-                            .advertisement {
-                                min-height: 200px;
-                                width: 99%;
-                                margin-top: 15px;
-                                margin-bottom: 10px;
-                                background-color: purple;
-                                vertical-align: top;
-                            }
+/*CSS reset settings here*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 950px;
+    background-color: darkgray;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#header {
+    min-height: 150px;
+    background-color: green;
+    margin-bottom: 15px;
+}
+
+#navigation {
+    min-height: 400px;
+    width: 200px;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+#main_content {
+    min-width: 690px;
+    height: 360px;
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.subcontents {
+    min-height: 212px;
+    width: 212px;
+    background-color: yellow;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 6px;
+}
+
+#advertisement {
+    min-height: 100px;
+    width: 675px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    background-color: purple;
+    vertical-align: top;
+}
