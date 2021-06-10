@@ -1,36 +1,203 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algoritmo 1</title>
-</head>
-
-<body>
-
+    <title>Algoritmos::</title>
     <script>
-        /*Ejercicio 1*/
-
+        /* ejercicio 1*/
         function a() {
             console.log('hello');
         }
-        console.log('Dojo');
+        console.log("Dojo");
+        //respt.:'Dojo' (string)
 
-        //respuesta: Undefined
+        /* ejercicio 2*/
 
-
-        /*Ejercicio 2*/
         function a() {
             console.log('hello');
             return 15;
         }
-        x = a();
+        x = a(); //x = 15; //asignacion y llamado a la funcion
         console.log('x is', x);
+        //respt.:"hello", 'x is' 15
 
-        //Respuesta:
+        /*ejercicio 3*/
+        function a(n) //n=3;
+        {
+            console.log('n is', n);
+            return n + 15; //return 3 + 15; return 18;
+        }
+        x = a(3); //x = 18;
+        console.log('x is', x);
+        //resp.:'n is' 3, 'x is' 18
+
+        /*ejercicio 4*/
+        function a(n) { //n=5
+            console.log('n is', n);
+            y = n * 2; //y = 5 * 2; y = 10;
+            return y; //return 10;
+        }
+        x = a(3) + a(5); //x = 6 + 10; x = 16;
+        console.log('x is', x);
+        //respt.:'n is' 3,'n is' 5, 'x is' 16
+
+        /*ejercicio 5*/
+        function op(a, b) { //a=3 ; b=5;
+            c = a + b; //c = 3 + 5 ; c = 8;
+            console.log('c is', c);
+            return c; //return 8;
+        }
+        x = op(2, 3) + op(3, 5); //x = 5 + 8; x= 13;
+        console.log('x is', x);
+        //respt.:'c is' 5, 'c is' 8,'x is' 13
+
+        /*ejercicio 6*/
+        function op(a, b) { //a = 3; b= 5;
+            c = a + b; //c =3+5; c = 8;
+            console.log('c is', c);
+            return c; //return 8;
+        }
+        x = op(2, 3) + op(3, op(2, 1)) + op(op(2, 1), op(2, 3));
+        //x= 5 + 6 + 8;//x = 19;
+        console.log('x is', x);
+        //respt.: 'c is' 5, 'c is' 3, 'c is' 6, 'c is' 3,'c is' 5,'c is' 8,'x is' 19
+
+        /*ejercicio 7*/
+        var x = 15; //definicion de variable (global)
+
+        function a() {
+            var x = 10; //declaracion(crear) de nueva variable
+        }
+
+        console.log(x);
+        a();
+        console.log(x);
+        //respt.:15, 15
+
+        /*ejercicio 8*/
+        function multiply(x, y) { //x = 2; y = 3;
+            console.log(x);
+            console.log(y);
+        }
+        b = multiply(2, 3); //b = undefined;
+        console.log("valor de b: " + b);
+        //respt.:2,3,undefined
+
+        /*ejercicio 9*/
+        function multiply(x, y) { //x=5; y=2;
+            return x * y; //return 5 * 2; return 10;
+        }
+        b = multiply(2, 3); //b = 6
+        console.log(b); //console.log(6);
+        console.log(multiply(5, 2)); //console.log(10);
+        //respt.:6,10
+
+        /*ejercicio 10*/
+        var x = [1, 2, 3, 4, 5, 10]; //declaracion de variable
+        //x[0]; x.length = 6; x[x.length-1] = 10
+
+        for (var i = 0; i < 5; i++) { //i=8
+            i = i + 3; //i = 4 + 3
+            console.log(i);
+        }
+        //respt.:3,7
+        /*ejercicio 11*/
+        var x = 15; //declaracion de variable global
+        console.log(x); //console.log(15)
+
+        function awesome() {
+            var x = 10; //declaracion local de variable
+            console.log(x);
+        }
+        console.log(x);
+        awesome(); //llamado a la funcion
+        console.log(x);
+        //respt.:15, 15, 10, 15
+
+        /*ejercicio 12*/
+        //i += 2=> i= i+2
+        for (var i = 0; i < 15; i += 2) { //i=16
+            console.log(i);
+        }
+        //respt.:0,2,4,6,8,10,12,14
+
+        /*ejercicio 13*/
+        for (var i = 0; i < 3; i++) { //i=0>1>2>3
+
+            for (var j = 0; j < 2; j++) { //j=0>1>2
+                console.log(i * j); //console.log(2*1);
+            }
+
+        }
+        //respt.:0,0,0,1,0,2
+
+        /* ejercicio 14*/
+        function looping(x, y) { //x= 3; y=3;
+
+            for (var i = 0; i < x; i++) { //i=0>1>2>3
+
+                for (var j = 0; j < x; j++) { //j=0>1>2>3
+                    console.log(i * j); //console.log(2*2)
+                }
+            }
+        }
+        z = looping(3, 3); //z = undefined
+        console.log(z);
+        //respt.:0,0,0,0,1,2,0,2,4,undefined
+
+        /*ejercicio 15*/
+        function looping(x, y) { //x=3,y=5
+
+            for (var i = 0; i < 3; i++) { //i=0>1>2>3
+
+                for (var j = 0; j < 5; j++) { //j=0
+
+                    console.log(i * j); //console.log(2*)
+                }
+            }
+            return x * y; //return 3*5; return 15;
+        }
+        z = looping(3, 5); //z=15;
+        console.log(z);
+        //respt.:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+        /*ejercicio 16*/
+        function printUpTo(x) {
+            if (x < 0) { //numero negativo
+                console.log("número negativo");
+                return false;
+            }
+            for (let i = 1; i <= x; i++) {
+                console.log(i);
+            }
+        }
+        printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+        y = printUpTo(-10); // debería imprimir false
+        console.log(y); // debería imprimir false
+
+        /*Ejercicio 17*/
+
+        /*Completa el codigo de más abajo para que la funcion imprima enteris(integers) de 0 a x y
+        donde cada entero imprima la suma (sum) parcial.
+        haz que la funcion entregue la suma final
+        
+        La palabra "y" concatena
+        la palabra a "if"
+        parcial es algo que puede ser sobreescrito.
+        
+
+        
+        
+        */
     </script>
+</head>
+
+<body>
+
 </body>
 
 </html>
