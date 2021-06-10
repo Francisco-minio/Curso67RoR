@@ -1,77 +1,77 @@
-                            /*CSS reset settings here*/
-                        
-                        * {
-                            margin: 0px;
-                            padding: 0px;
-                        }
-                        
-                        #wrapper {
-                            width: 98%;
-                            height: 100%;
-                            background-color: darkgray;
-                            margin: 5px;
-                            padding: 10px;
-                            display: inline-block;
-                        }
-                        
-                        @media only screen and (min-width: 481px) {
-                            .sm {
-                                display: block;
-                            }
-                            .header {
-                                min-width: 30%;
-                            }
-                            .navigation {
-                                display: none;
-                            }
-                        }
-                        
-                        @media only screen and (min-width: 481px) and (max-width:1023px) {
-                            .med {
-                                display: block;
-                            }
-                            .navigation {
-                                display: none;
-                            }
-                        }
-                        
-                        @media only screen and (min-width: 1024px) {
-                            .lg {
-                                display: block;
-                            }
-                            .header {
-                                min-width: 98%;
-                                min-height: 150px;
-                                background-color: green;
-                                margin-bottom: 15px;
-                            }
-                            .navigation {
-                                min-width: 20%;
-                                min-height: 400px;
-                                background-color: blue;
-                                display: inline-block;
-                                vertical-align: top;
-                                margin-right: 15px;
-                            }
-                            #main_content {
-                                min-width: 70%;
-                                background-color: red;
-                                display: inline-block;
-                                vertical-align: top;
-                                padding: 20px;
-                            }
-                            .subcontents {
-                                width: 20%;
-                                height: 180px;
-                                background-color: yellow;
-                                display: inline-block;
-                                padding: 2%;
-                            }
-                            .advertisement {
-                                min-height: 200px;
-                                width: 99%;
-                                margin-top: 15px;
-                                margin-bottom: 10px;
-                                background-color: purple;
-                                vertical-align: top;
-                            }
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*
+* {
+    outline: 1px dotted red;
+}
+*/
+
+
+/*Contenedor Bloques*/
+
+#container {
+    width: 975px;
+    height: 900px;
+    display: inline-block;
+    background-color: #d4d2ae;
+    text-align: center;
+}
+
+
+/*Header*/
+
+#header {
+    width: 910px;
+    /*contendor centra los elementos internos*/
+    text-align: center;
+}
+
+.imghead {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background-color: white;
+    vertical-align: middle;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+
+/*imagenes en bloques*/
+
+#content {
+    display: inline-block;
+    width: 910px;
+    height: 910px;
+    vertical-align: top;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.img {
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 4px;
+    border: black 4px solid;
+}
+
+.borderskyblue {
+    background-color: #82b4ee;
+}
+
+.borderpink {
+    background-color: #f36870;
+}
