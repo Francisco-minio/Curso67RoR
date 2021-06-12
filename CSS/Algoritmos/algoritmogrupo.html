@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*7 - Incrementa los Segundos - Dado un array de números llamado arr, suma 1 a los elementos, específicamente a aquellos cuyo índice
+                                                es impar(arr[1], arr[3], arr[5], etc).Luego, imprime(console.log) cada valor del array y devuelve el arreglo arr.*/
+
+        function Impares(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (i % 2 != 0) {
+                    arr[i] = arr[i] + 1;
+                    //arr[i]++;
+                }
+                console.log(arr[i]);
+            }
+            return arr;
+        }
+
+        Impares([1, 2, 3, 4, 5])
+
+
+
+        /* 8 - Longitudes previas - Pasado un array(similar a decir‘ tomado un array’ o‘ dado un array’) que contiene strings,
+reemplaza cada string con un número de acuerdo cantidad de letras(longitud) del string anterior.Por ejemplo,
+longitudesPrevias([“programar”, “dojo”, “genial”]) debería devolver[“programar”, 9, 4].Pista: ¿For loops solo puede ir hacia adelante ?*/
+
+        //for (let i = 30; i > 0; i--) {// for inverso
+        //    console.log(i)
+        //}
+
+        function longitudesPrevias(array) {
+            let stringAnterior = [array[0]]; //[array[0]]
+            for (let i = 0; i < array.length - 1; i++) {
+                stringAnterior.push(array[i].length);
+            }
+            return stringAnterior;
+        }
+
+        longitudesPrevias(['programar', 'dojo', 'genial']);
+
+
+
+        /* 9 - Agrega Siete - Construye una función que acepte un array.Devuelve un nuevo array con todos los valores del original,
+pero sumando 7 a cada uno.No alteres el array original.Por ejemplo, agregaSiete([1, 2, 3) debería devolver[8, 9, 10] en un nuevo array.*/
+
+        function agregaSiete(array) {
+            let arrayCero = [];
+            for (let i = 0; i < array.length; i++) {
+                arrayCero[i] = array[i] + 7;
+            }
+            return arrayCero;
+        }
+
+        agregaSiete([1, 2, 3])
+
+
+        /* 10 - Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar.Ejemplo: invertir([3, 1, 6, 4, 2))
+                devuelve el mismo array pero con sus valores al revés, es decir[2, 4, 6, 1, 3].Haz esto sin crear un array temporal vacío.(Pista: necesitarás intercambiar(swap) valores).
+*/
+        // [2, 4, 6, 1, 3] a - 5 elementos, comenzamos posicion 0. b - tomamos valor posicion i = 0 y lo guardamos en una
+        // var.c - tomamos valor posicion(5 - 1) - (i = 0) y lo guardamos en posicion i = 0. d - tomamos valor
+        //var y lo guardamos en posicion(5 - 1) - (i = 0).
+        // e - incrementamos a posicion i = 1. f - tomamos valor posicion i = 1 y lo guardamos en una
+        // var.g - tomamos valor posicion(5 - 1) - (i = 1) y lo guardamos en posicion i = 1. h - tomamos valor
+        //  var y lo guardamos en posicion(5 - 1) - (i = 1).
+
+
+        function invertir(array) {
+            let z = 0;
+            for (let i = 0; i < 0.5 * array.length; i++) {
+                z = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = z;
+            }
+            return array;
+        }
+
+        invertir([3, 1, 6, 4, 2])
+
+
+        //Version complicada de Francisco (sin 0.5x)
+        function invertir2(array) {
+            let z = 0;
+            let sum = 0;
+            let array2 = array;
+            for (let i = 0; i < array.length; i++) {
+                z = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = z;
+                for (let j = 0; j < array.length; j++) {
+                    sum += array2[array2.length - 1 - i] == array[i];
+                }
+                if (sum == array.length) {
+                    return array;
+                }
+            }
+            return array;
+        }
+
+        invertir2([3, 1, 6, 4, 2])
+    </script>
+
+
+</body>
+
+</html>
