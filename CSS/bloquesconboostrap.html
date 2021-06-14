@@ -10,27 +10,28 @@
     <title>Bloques con Boostrap</title>
 </head>
 
-<!--Utilice las siguientes clases para esta actividad .col-{numero, blank, auto} .row .bg-{color} .p-{numero} (el espaciado (paddings) puede ser aplicado en diferentes formas. Más detalles aquí). .m-{number} (lo mismo que el atributo anterior) .text-{color}
+<!--Utilice las siguientes clases para esta actividad .col-{numero, blank, auto} .row .bg-{color} .p-{numero} (el espaciado (paddings) puede ser aplicado en diferentes formas.
+     Más detalles aquí). .m-{number} (lo mismo que el atributo anterior) .text-{color}
 .container .offset-{numero -->
 
 <body>
     <div class="container">
-        <div class="row p-3">
+        <div class="row m-2">
             <div class="col bg-dark text-light">
-                <div class="p-3 text-center border primary ">Header</div>
+                <div class="p-3 text-center">Header</div>
             </div>
         </div>
-        <div class="row ">
-            <div class="col-sm " style="height:300px; ">Aside</div>
-            <div>Main
-                <div style="height:400px; ">
-                    <div>Article</div>
-                    <div>Article</div>
-                </div>
+        <div class="row m-2 d-inline">
+            <div class="col-4 bg-info" style="height:300px;">Aside</div>
+            <div class="col w-auto bg-warning ml-2 text-center">Main
+                <div class="col p-3 bg-light text-center">Article</div>
+                <div class="col p-3 bg-light text-center">Article</div>
             </div>
+
         </div>
+
         <div>
-            <div>Footer</div>
+            <div class="container">Footer</div>
         </div>
     </div>
 
