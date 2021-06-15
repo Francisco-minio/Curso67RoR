@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Estructura BASE ----> $('').accion(function(){});
+            //Acciones por etiquetas 
+            //todos los button se ven afectados
+            $('button').click(function() {
+                console.log("accion por etiqueta button");
+                alert("accion por etiqueta button");
+            });
+            //Etiqueta Input
+            // $('input').click(function() {
+            //   console.log("accion por etiqueta Input");
+            // alert("accion por etiqueta input");
+            //});
+            $('input.input2').click(function() {
+                console.log("accion por Clase Input");
+                alert("accion por Clase input2");
+            });
+            $('#input3').click(function() {
+                console.log("accion por ID Input");
+                alert("accion por ID input3");
+            });
+
+            $('#inputtest').click(function() {
+                var texto = $('#parrafo').text()
+                console.log(texto);
+                $('#parrafo').text("este es otro texto");
+
+            });
+            //fin JQuery
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+
+        <button>Button</button>
+        <input type="button" value="input1">
+        <input type="button" class="input2" value="input2">
+        <input type="button" id="input3" value="input3">
+        <input type="button" id="inputtest" value="input4">
+        <p class="input2" id="parrafo">esto es un parrafo con la clase input</p>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
