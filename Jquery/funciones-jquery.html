@@ -18,12 +18,14 @@
             $('#RemoveClass').click(function() {
                 $('.paragraph').css("color", "black");
             });
-            $('#Slidetoggle').click(function() {
+            $('#Slidetoggle').hover(function() {
                 $('.toggle').slideToggle("fast")
             });
-            $('#Append').click(function() {
-
-                $("p .addappend").append($("Click the button to Append a new paragraph"))
+            $('#Slidetoggle2').click(function() {
+                $('.toggle').slideToggle("fast")
+            });
+            $('.Append').click(function() {
+                $("p.addappend").append("<br>Click the button to Append a new paragraph.");
 
             });
         });
@@ -50,8 +52,10 @@
         </div>
         <div class="row m-2 h-3" style="height: 200px;">
             <div class="col p-5 h-100 bg-success text-center">
-                <button type="button" id="Slidetoggle" class="btn btn-info btn-lg shadow-lg">Slidetoggle</button>
+                <button type="button" id="Slidetoggle" class="btn btn-info btn-lg shadow-lg m-2">Slidetoggle HOVER</button>
+                <button type="button" id="Slidetoggle2" class="btn btn-warning btn-lg shadow-lg">Slidetoggle CLICK</button>
             </div>
+
             <div class="col p-5 h-100 bg-success">
                 <h1 class="toggle">Slidetoggle</h1>
                 <p class="toggle">Click the button to Slidetoggle a hidden image</p>
@@ -59,12 +63,12 @@
 
         </div>
         <div class="row m-2 h-3" style="height: 200px; ">
-            <div class="col p-5 h-100 bg-info text-center">
+            <div class="col p-5 h-auto bg-info text-center">
                 <button type="button" class="Append btn btn-primary btn-lg shadow-lg">Append</button>
             </div>
-            <div class="col p-5 h-100 bg-info" class="test">
+            <div class="col p-5 h-auto bg-info" class="test">
                 <h1>Append</h1>
-                <p class="p-3 addappend">Click the button to Append a new paragraph</p>
+                <p class="addappend">Click the button to Append a new paragraph</p>
             </div>
 
         </div>
