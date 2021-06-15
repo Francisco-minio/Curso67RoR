@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Básica 1</title>
+</head>
+
+<body>
+    <script>
+        function a() {
+            return 35;
+        }
+        console.log(a())
+            //respuesta: 35
+
+        function a() {
+            return 4;
+        }
+        console.log(a() + a());
+        //Console.log(4+4)
+        //Respuesta: 8
+
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4));
+        //Respuesta:console.log(2+4)
+        //respuesta: 6
+
+        function a(b) {
+            return b * 4;
+            console.log(b);
+        }
+        console.log(a(10));
+
+        //Respuesta: 40
+
+        function a(b) {
+            if (b < 10) {
+                return 2;
+            }    
+            else {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15));
+
+        //Respuesta: 4
+
+        function a(b, c) {
+            return b * c;
+        }
+        console.log(10, 3);
+        console.log(a(3, 10));
+
+        //Respuesta: console.log(10,3)
+        //Respuesta: console.log(30)
+        //Respuesta 10,3 // 30
+
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+
+        //Respuesta: 3
+        //respuesta: 4
+
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a();
+        //Respuesta: console.log(2,3,5,8,11)
+        //Respuesta: 2,3,5,8,11
+
+        function a(b, c) {
+            for (var i = b; i < c; i++) {
+                //(var i = 0; i < 10; i++)
+                console.log(i);
+            }
+            return b * c;
+        }
+        a(0, 10);
+        console.log(a(0, 10));
+
+        //Respuesta:
+    </script>
+</body>
+
+</html>
