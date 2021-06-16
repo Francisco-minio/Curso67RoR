@@ -28,6 +28,42 @@
                 $("p.addappend").append("<br>Click the button to Append a new paragraph.");
 
             });
+            $('#SlideDown').click(function() {
+                $('.toggle').slideDown("slow")
+            });
+            $('#SlideUp').click(function() {
+                $('.toggle').slideUp("slow")
+            });
+            $('#Toggle').click(function() {
+                $('.toggle').toggle("slow")
+
+            });
+            $('#Show').click(function() {
+                $('.paragraph').show("300")
+
+            });
+
+            $('#Hide').click(function() {
+                $('.paragraph').hide("300")
+
+            });
+
+            $('#FadeIn').click(function() {
+                $('.titleappend').fadeIn("slow")
+
+            });
+            $('#FadeOut').click(function() {
+                $('.titleappend').fadeOut("fast")
+
+            });
+            $('#Before').click(function() {
+                $('.addappend').before("<br>NUEVO TEXTO ANTERIOR AL PARRAFO")
+
+            });
+            $('#After').click(function() {
+                $('.addappend').after("<br>>NUEVO TEXTO DESPUES DEL PARRAFO")
+
+            });
         });
     </script>
 
@@ -38,39 +74,50 @@
 <body>
 
     <div class="container-lg">
-        <div class="row m-2 h-3" style="height: 200px;">
-            <div class="col p-5 h-100 bg-primary text-center">
+        <div class="row m-2 h-auto" style="height: auto;">
+            <div class="col p-5 h-auto bg-primary text-center">
 
-                <button type="button" id="AddClass" class="btn btn-info btn-lg shadow-lg m-2">AddClass</button>
+                <button type="button" id="AddClass" class="btn btn-info btn-lg shadow-lg">AddClass</button>
                 <button type="button" id="RemoveClass" class="btn btn-info btn-lg shadow-lg">RemoveClass</button>
+                <button type="button" id="Hide" class="btn btn-warning btn-lg shadow-lg">Hide</button>
+                <button type="button" id="Show" class="btn btn-info btn-lg shadow-lg">Show</button>
+
             </div>
-            <div class="col p-3 bg-primary">
+            <div class="col p-5 bg-primary">
                 <h1>AddClass</h1>
                 <p class="paragraph">Click the button to add class 'red' to this paragraph</p>
             </div>
-
+            <hr>
         </div>
-        <div class="row m-2 h-3" style="height: 200px;">
-            <div class="col p-5 h-100 bg-success text-center">
+        <div class="row m-2 h-auto" style="height: auto;">
+            <div class="col p-5 h-auto bg-success text-center">
                 <button type="button" id="Slidetoggle" class="btn btn-info btn-lg shadow-lg m-2">Slidetoggle HOVER</button>
                 <button type="button" id="Slidetoggle2" class="btn btn-warning btn-lg shadow-lg">Slidetoggle CLICK</button>
+                <button type="button" id="SlideUp" class="btn btn-warning btn-lg shadow-lg">SlideUp</button>
+                <button type="button" id="SlideDown" class="btn btn-success btn-lg shadow-lg">SlideDown</button>
+                <button type="button" id="Toggle" class="btn btn-success btn-lg shadow-lg">Toggle</button>
             </div>
 
-            <div class="col p-5 h-100 bg-success">
+            <div class="col p-5 h-auto bg-success">
                 <h1 class="toggle">Slidetoggle</h1>
                 <p class="toggle">Click the button to Slidetoggle a hidden image</p>
             </div>
-
+            <hr>
         </div>
-        <div class="row m-2 h-3" style="height: 200px; ">
+        <div class="row m-2 h-auto" style="height: auto; ">
             <div class="col p-5 h-auto bg-info text-center">
                 <button type="button" class="Append btn btn-primary btn-lg shadow-lg">Append</button>
+                <button type="button" class="btn btn-success btn-lg shadow-lg" id="FadeOut">Fade Out</button>
+                <button type="button" class="btn btn-success btn-lg shadow-lg" id="FadeIn">Fade In</button>
+                <button type="button" class="btn btn-info btn-lg shadow-lg" id="After">After</button>
+                <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Before">Before</button>
+
             </div>
             <div class="col p-5 h-auto bg-info" class="test">
-                <h1>Append</h1>
+                <h1 class="titleappend">Append</h1>
                 <p class="addappend">Click the button to Append a new paragraph</p>
             </div>
-
+            <hr>
         </div>
 
 

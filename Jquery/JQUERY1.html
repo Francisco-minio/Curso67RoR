@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY BASE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Estructura BASE ----> $('').accion(function(){});
+            //FORMATO SIN "THIS"
+            /*$('#goku.png').click(function() {
+                $('#image1').hide(); //--> Esconder imagen
+            });
+            $('#image2').click(function() {
+                $('#image2').hide();
+            });
+            $('#image3').click(function() {
+                $('#image3').hide();
+            });
+            $('#image4').click(function() {
+                $('#image4').hide();
+            });
+            $('#image5').click(function() {
+                $('#image5').hide();
+            });
+            */
+            // Esconde todo con etiqueta img
+            /*
+            $('img').accion(function() {
+                $('#image1').hide();
+                $('#image2').hide();
+                $('#image3').hide();
+
+            });
+            */
+            $('img').click(function() {
+                $(this).hide(); //el elemento que gatilla la acción
+                console.log($(this));
+            });
+
+
+            //fin JQuery
+        });
+    </script>
+
+</head>
+<style>
+    img {
+        width: 200px;
+    }
+</style>
+
+<body>
+    <img src="goku.png" id="image1" />
+    <img src="goku.png" id="image2" />
+    <img src="goku.png" id="image3" />
+    <img src="goku.png" id="image4" />
+    <img src="goku.png" id="image5" />
+</body>
+
+</html>
