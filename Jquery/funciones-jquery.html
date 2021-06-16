@@ -12,11 +12,12 @@
         $(document).ready(function() {
             // $('').accion(function(){});
 
-            $('#AddClass').click(function() {
-                $('.paragraph').css("color", "red");
+
+            $('#bred').click(function() {
+                $('#col1').addClass("bg-danger")
             });
-            $('#RemoveClass').click(function() {
-                $('.paragraph').css("color", "black");
+            $('#bgreen').click(function() {
+                $('#col1').addClass("bg-success")
             });
             $('#Slidetoggle').hover(function() {
                 $('.toggle').slideToggle("slow")
@@ -24,10 +25,7 @@
             $('#Slidetoggle2').click(function() {
                 $('.toggle').slideToggle("fast")
             });
-            $('.Append').click(function() {
-                $("p.addappend").append("<br>Click the button to Append a new paragraph.");
-
-            });
+            $
             $('#SlideDown').click(function() {
                 $('.toggle').slideDown("slow")
             });
@@ -37,6 +35,12 @@
             $('#Toggle').click(function() {
                 $('.toggle').toggle("slow")
 
+            });
+            $('#ColorRed').click(function() {
+                $('.paragraph').css("color", "red");
+            });
+            $('#ColorBlack').click(function() {
+                $('.paragraph').css("color", "black");
             });
             $('#Show').click(function() {
                 $('.paragraph').show("300")
@@ -61,9 +65,28 @@
 
             });
             $('#After').click(function() {
-                $('.addappend').after("<br>>NUEVO TEXTO DESPUES DEL PARRAFO")
+                $('.addappend').after("<br> <p class=test>NUEVO TEXTO DESPUES DEL PARRAFO</p>")
 
             });
+            $('#Html').click(function() {
+                $(".titleappend").html("<img width='200px' src='goku.png'/>")
+            });
+            $('.Append').click(function() {
+                $("p.addappend").append("<br>Click the button to Append a new paragraph.");
+            });
+            $('#attr').click(function() {
+                $(".titleaddclass").attr('style', 'color:rgb(255, 200, 0)');
+
+            });
+            $('#Val').click(function() {
+                $("#recvalor").val("VALOOOOR!!");
+
+
+
+
+            });
+
+
         });
     </script>
 
@@ -76,15 +99,18 @@
     <div class="container-lg">
         <div class="row m-2 h-auto" style="height: auto;">
             <div class="col p-5 h-auto bg-primary text-center">
-
-                <button type="button" id="AddClass" class="btn btn-info btn-lg shadow-lg">AddClass</button>
-                <button type="button" id="RemoveClass" class="btn btn-info btn-lg shadow-lg">RemoveClass</button>
+                <button type="button" id="bred" class="btn btn-info btn-lg shadow-lg">BackGround Rojo</button>
+                <button type="button" id="bgreen" class="btn btn-info btn-lg shadow-lg">BackGround Verde</button>
+                <button type="button" id="ColorRed" class="btn btn-info btn-lg shadow-lg">Color Texto ROJO</button>
+                <button type="button" id="ColorBlack" class="btn btn-info btn-lg shadow-lg">Color Texto Negro</button>
                 <button type="button" id="Hide" class="btn btn-warning btn-lg shadow-lg">Hide</button>
                 <button type="button" id="Show" class="btn btn-info btn-lg shadow-lg">Show</button>
+                <button type="button" id="attr" class="btn btn-info btn-lg shadow-lg">Attr Color Titulo</button>
+
 
             </div>
-            <div class="col p-5 bg-primary">
-                <h1>AddClass</h1>
+            <div class="col p-5 bg-primary" id="col1">
+                <h1 class="titleaddclass">AddClass</h1>
                 <p class="paragraph">Click the button to add class 'red' to this paragraph</p>
             </div>
             <hr>
@@ -111,6 +137,9 @@
                 <button type="button" class="btn btn-success btn-lg shadow-lg" id="FadeIn">Fade In</button>
                 <button type="button" class="btn btn-info btn-lg shadow-lg" id="After">After</button>
                 <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Before">Before</button>
+                <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Html">HTML</button>
+                <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Val">VAL</button>
+                <input type="text" name="receptorvalor" id="recvalor" class="rec" value="">
 
             </div>
             <div class="col p-5 h-auto bg-info" class="test">
@@ -124,16 +153,6 @@
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js " integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p " crossorigin="anonymous "></script>
