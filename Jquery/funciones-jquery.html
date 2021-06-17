@@ -67,6 +67,7 @@
                 $('.addappend').after("<br> <p class=test>NUEVO TEXTO DESPUES DEL PARRAFO</p>")
 
             });
+            //Reemplaza el contenido del elemento
             $('#Html').click(function() {
                 $(".titleappend").html("<img width='200px' src='goku.png'/>")
             });
@@ -78,7 +79,12 @@
 
             });
             $('#Val').click(function() {
-                $("#recvalor").val("VALOOOOR!!");
+                $("#recvalor").val("VALOOOOR!!"); //val toma los valores como String
+            });
+            $('#mostrarval').click(function() {
+                var texto1 = $('#recvalor').val();
+
+                alert(texto1)
             });
         });
     </script>
@@ -129,8 +135,9 @@
                 <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Before">Before</button>
                 <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Html">HTML</button>
                 <button type="button" class="btn btn-danger btn-lg shadow-lg" id="Val">VAL</button>
+                <!--input para val-->
                 <input type="text" name="receptorvalor" id="recvalor" class="rec" value="">
-
+                <button type="button" class="btn btn-danger btn-lg shadow-lg" id="mostrarval">VAL</button>
             </div>
             <div class="col p-5 h-auto bg-info" class="test">
                 <h1 class="titleappend">Append</h1>

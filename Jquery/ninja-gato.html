@@ -13,41 +13,29 @@
 
             // Estructura BASE ----> $('').accion(function(){});
 
+            for (let i = 0; i <= 4; i++) {
+                $('#containerdiv').append('<img src=img/ninja' + i + '.png alt-src=img/cat' + i + '.png><br>'); // se concatena los "numeros de las imagenes" con el +i+ para agregar imagenes con el "mismo nombre"
+                $('img').addClass('bg-info p-1 text-center');
+            }
 
-
-
-
-
-
+            $('img').click(function() {
+                var temp = $(this).attr('src'); //almacena momentaneamente lo que esta en el src
+                $(this).attr('src', $(this).attr('alt-src')); //sobre escribe lo del src por el contenido del alt-src
+                $(this).attr('alt-src', temp); // sobre escribe el contenido de alt-src por temp
+            });
+            $('button').click(function() {
+                $('img').attr($(this).attr('src'));
+            });
             //fin JQuery
         });
     </script>
-    <style>
-        img {
-            width: 20px;
-        }
-    </style>
+
 </head>
 
 <body>
-
-    <div class="row container">
-        <div class="col"></div>
-
-        <img src="img/cat0.png" alt="">
-        <img src="img/cat1.png" alt="">
-        <img src="img/cat2.png" alt="">
-        <img src="img/cat3.png" alt="">
-        <img src="img/cat4.png" alt="">
-        <img src="img/ninja0.png" alt="">
-        <img src="img/ninja1.png" alt="">
-        <img src="img/ninja2.png" alt="">
-        <img src="img/ninja3.png" alt="">
-        <img src="img/ninja4.png" alt="">
-
-
-
+    <div class="container h-100 mt-5 ml-5" id="containerdiv">
     </div>
+
 
 
 
