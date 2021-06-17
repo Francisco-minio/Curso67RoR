@@ -6,7 +6,7 @@
     <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('p, h3, li').hover(function() {
+            $('p, h3, li').hover(function() { // Parentesis entre hover y fuction
                     $(this).css('color', 'white');
                 },
                 function() {
@@ -18,15 +18,15 @@
             });
 
             $('img').click(function() {
-                $(this).slideUp();
+                $(this).slideUp(); //faltaba lla } paar cerrar fuction
             });
 
             $('h5').click(function() {
-                $('img').slideDown();
+                $('img').slideDown(); //Slide Down
             });
 
             $('button').click(function() {
-                var result = $('input:checked').val()
+                var result = $('input:checked').val() // decia Value en vez de val
                 alert("Thank you for your input, we like " + result + " too!");
             });
         });
