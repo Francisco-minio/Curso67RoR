@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('document').ready(function() {
+            //$('').accion(function(){});
+            var arrayTemporal = [];
+            for (let i = 1; i <= 10; i++) {
+                //obtener respuesta desde una url en formatoJSON
+                $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(respuesta) {
+                    //console.log(respuesta.id);
+                    //console.log(respuesta.name);
+                    arrayTemporal.push(respuesta);
+
+                    console.log("3.- Dentro del get");
+                    //console.log(arrayTemporal);
+                    //.sort() ordena menor a mayor, a-z; sort().reverse(), ordena al reves;
+                    arrayTemporal.sort((a, b) => (a.id > b.id) && 1 || -1); //Ordenar array de objetos 
+                    console.log(arrayTemporal); //array ordenado
+                    if (arrayTemporal.length == 10) {
+                        for (let j = 0; j < arrayTemporal.length; j++) {
+                            $('#container').append('<p>El id es:' + arrayTemporal[j].id + '</p>');
+                            $('#container').append('<p>El nombre es:' + arrayTemporal[j].name + '</p>');
+                            $('#container').append('<img src="' + arrayTemporal[j].sprites.front_default + '">');
+                        }
+                    }
+                    //console.dir(respuesta);
+                }, "json");
+
+                console.log("1.- fuera del get...dentro del for");
+
+            }
+            console.log("2.- fuera del for...");
+            //fin JQuery    
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
