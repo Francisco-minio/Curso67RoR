@@ -10,27 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script>
         $(document).ready(function() {
-            var idpokedex = "";
-            for (let i = 1; i <= 898; i++) {
-                $('#container').append('<img id=' + i + ' src="http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png">');
-            }
 
-
-            $('img').click(function() {
-                var idpokedex = $(this).attr("id");
-                console.log(idpokedex);
-            });
-
-            $.get("https://pokeapi.co/api/v2/pokemon/" + idpokedex + "", function(res) {
-                var html_str = "";
-                html_str += "<h4>Types</h4>";
-                html_str += "<ul>";
-                for (var i = 0; i < res.types.length; i++) {
-                    html_str += "<li>" + res.types[i].type.name + "</li>";
-                }
-                html_str += "</ul>";
-                $("#pokedex").html(html_str);
-            }, "json");
         });
 
         //fin JQuery
