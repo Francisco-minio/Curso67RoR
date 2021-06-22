@@ -11,7 +11,7 @@
         $('document').ready(function() {
             //$('').accion(function(){});
             var arrayTemporal = [];
-            for (let i = 1; i <= 10; i++) {
+            for (let i = 1; i <= 151; i++) {
                 //obtener respuesta desde una url en formatoJSON
                 $.get("https://pokeapi.co/api/v2/pokemon/" + i + "/", function(respuesta) {
                     //console.log(respuesta.id);
@@ -23,7 +23,7 @@
                     //.sort() ordena menor a mayor, a-z; sort().reverse(), ordena al reves;
                     arrayTemporal.sort((a, b) => (a.id > b.id) && 1 || -1); //Ordenar array de objetos 
                     console.log(arrayTemporal); //array ordenado
-                    if (arrayTemporal.length == 10) {
+                    if (arrayTemporal.length == 151) {
                         for (let j = 0; j < arrayTemporal.length; j++) {
                             $('#container').append('<p>El id es:' + arrayTemporal[j].id + '</p>');
                             $('#container').append('<p>El nombre es:' + arrayTemporal[j].name + '</p>');
