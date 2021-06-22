@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title>The Codingdojo ColorClicker!</title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        function random_color() {
+            var rgb = ['a', 'b', 'c', 'd', 'e', 'f', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            color = '#' //this is what we'll return!
+            for (var i = 0; i < 6; i++) {
+                x = Math.floor((Math.random() * 16))
+                color += rgb[x];
+            }
+            return color;
+        }
+        $(document).ready(function() {
+
+            //¡Cliquear el cuadro grande debería cambiar los colores de fondo de los cuadros pequeños y grandes!
+            $('#large_box').click(function() {
+                $(this).parent().children().children().css('background-color', random_color());
+                $(this).parent().children('#large_box').css('background-color', random_color());
+                console.log("hola");
+
+            });
+            //¡Cliquear el cuadro pequeño del medio debería cambiar el color del cuadro grande!
+            $('.middle_box').click(function() {
+                $('#large_box').parent().children('#large_box').css('background-color', random_color());
+                console.log("hola");
+
+            });
+            // Cliquear el cuadro pequeño de la izquierda o la derecha debería cambiar el color de los siblings de ese cuadro
+            $('.side_box').click(function() {
+                $(this).siblings().css('background-color', random_color());
+
+            });
+            // $('#large_box').click(function() {
+            //   alert('you clicked the big box!');
+            //comenta esto cuando hayas averiguado para qué se utiliza event.stopPropagation 
+            //Esta función evita que el método .click() se propague del elemento child al parent porque, técnicamente, cuando haces clic en los cuadros más pequeños, además estás cliqueando el cuadro grande.
+            //Esta función nos permite hacer que el evento.click() sea exclusivo de los cuadros pequeños y no del grande
+
+            $('.side_box').click(function(event) {
+                event.stopPropagation();
+            });
+            $('.middle_box').click(function(event) {
+                event.stopPropagation();
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        * {
+            font-family: sans-serif;
+        }
+        
+        h2,
+        h1,
+        h3 {
+            text-align: center;
+        }
+        
+        #large_box {
+            margin: 0px auto;
+            margin-top: 30px;
+            background-color: lightblue;
+            width: 1200px;
+            height: 300px;
+        }
+        
+        #large_box div {
+            background-color: blue;
+            display: inline-block;
+            width: 350px;
+            height: 130px;
+            margin: 60px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>¡El ColorClicker de Codingdojo! </h1>
+    <div id='large_box'>
+        <div class='side_box'></div>
+        <div class='middle_box'></div>
+        <div class='side_box'></div>
+    </div>
+    <h2>Rules</h2>
+    <h3>1. ¡Cliquear el cuadro grande debería cambiar los colores de fondo de los cuadros pequeños y grandes!</h3>
+    <h3>2. ¡Cliquear el cuadro pequeño del medio debería cambiar el color del cuadro grande!</h3>
+    <h3>3. Cliquear el cuadro pequeño de la izquierda o la derecha debería cambiar el color de los siblings de ese cuadro</h3>
+</body>
+
+</html>
