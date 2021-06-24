@@ -7,48 +7,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Api-KEy Clima</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Api-Key Clima</title>
     <script>
         $(document).ready(function() {
-            $('#container').submit(function() {
-                // your code here (build up your url)
-                $.get('https://api.openweathermap.org/data/2.5/&APPID=6ed35a1647dfc5de77c1e388b1f0b760', function(res) {
-                    console.dir()
-                    $('#container').html('');
-                    $('#container').append('<p>El clima es ' + res.coord + '</p>')
-                        // your code here
+            $('#mostrar').click(function() {
+                var city = $('#ciudad').val();
+                var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&&appid=6ed35a1647dfc5de77c1e388b1f0b760';
+
+
+                $.get(url, function(respuesta) {
+                    console.dir(respuesta)
+                    $('#modal-footer2').html('');
+                    var html_str = "";
+                    html_str += "<h2>Datos</h4>";
+                    html_str += "<ul>";
+                    for (var i = 0; i < respuesta.weather.length; i++) {
+                        html_str += "<li>" + respuesta.weather[i].description + "</li>";
+                        html_str += "<li>" + respuesta.weather[i].icon + "</li>";
+                        html_str += "<li>" + respuesta.weather[i].id + "</li>";
+                        html_str += "<li>" + respuesta.weather[i].main + "</li>";
+
+                    }
+                    html_str += "</ul>";
+                    $('#modal-footer2').append(html_str);
+
+                    $('#modal-footer2').append('<p>La Densidad es ' + respuesta.wind.deg + '</p>');
+                    $('#modal-footer2').append('<p>El viento es de ' + respuesta.wind.speed + ' km/h</p>');
+                    $('#modal-footer2').append('<p>Latitud ' + respuesta.coord.lat + '</p>');
+                    $('#modal-footer2').append('<p>Longitud ' + respuesta.coord.lon + '</p>');
+                    //$('#datos').append('<p>Longitud ' + respuesta.main: +'</p>');
+
                 }, 'json');
-                // don't forget to return false so the page doesn't refresh
-                return false;
             });
-            $('button').click(function(res) {
-                $('#container').append('<p>"Hola" ' + res.coord + '</p>');
-            });
-
-
-
 
         });
     </script>
-
-
 </head>
 
 <body>
-    <div class="container-fluid" id="container">
+    <!--<div class="container">
         <div class="row">
-            <div class="col-4">
-                <input type="text">Intro aqui
-                <button type="submit">ENVIALO</button>
+            <div class="col bg-success" id="container">
+                Ingresar Ciudad<input type="text" name="ciudad" id="ciudad">
+
+                <button type="button" class="btn btn-outline-light">Consultar</button>
+            </div>
+            <div class="col bg-danger" id="datos">
+
             </div>
         </div>
-
+    </div>-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Abrir consulta</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Buscar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="test">
+                            <label class="col-form-label">Buscar Ciudad</label>
+                            <input class="form-control" id="ciudad"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="mostrar" class="btn btn-primary">Buscar info</button>
+                </div>
+                <div id="modal-footer2" class=""></div>
+            </div>
+        </div>
     </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
