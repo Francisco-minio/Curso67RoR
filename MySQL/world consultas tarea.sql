@@ -18,10 +18,11 @@ select * from cities;
 select * from countries where name like '%mexi%';
 select name,population from countries where id = "136"; 
 
-select ct.name, ct.population Poblacion, cn.name Codigo_Pais from cities ct
+select  cn.name Pais, ct.name Ciudad, ct.population Poblacion from cities ct
 inner join countries cn
 on cn.id = ct.country_id
-where ct.country_id ="136" and ct.population >= 500000 
+where ct.country_id ="136" 
+and ct.population >= 500000 
 order by ct.population desc;
 
 -- 4 ¿Qué consulta ejecutarías para obtener todos los idiomas en cada país con un porcentaje superior al 89%?
@@ -29,10 +30,10 @@ order by ct.population desc;
 
 select * from languages;
 
-select cn.name Nombre_Pais ,lg.language Idioma, lg.percentage Porcentaje from languages lg
+select cn.name Pais ,lg.language Idioma, lg.percentage Porcentaje from languages lg
 inner join countries cn
 on cn.id = lg.country_id
-where lg.percentage >= "89"
+where lg.percentage > "89"
 order by lg.percentage desc;
 
 
@@ -48,7 +49,7 @@ and cn.population >= 100000;
 -- 6. ¿Qué consulta harías para obtener países con solo Monarquía Constitucional con un capital superior a 200 y una esperanza de vida superior a 75 años? (1)
 
 select cn.name Nombre_Pais,cn.government_form, cn.capital, cn.life_expectancy from countries cn
-where cn.government_form = 'Constitutional Monarchy' and capital >= 200 and cn.life_expectancy >=75;
+where cn.government_form = 'Constitutional Monarchy' and capital > 200 and cn.life_expectancy >75;
 
 -- 7. ¿Qué consulta harías para obtener todas las ciudades de Argentina dentro del distrito de Buenos Aires y tener una población superior a 500,000? 
 -- La consulta debe devolver el nombre del país, el nombre de la ciudad, el distrito y la población. (2)
